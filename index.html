@@ -1,0 +1,61 @@
+<head>
+  <link rel="stylesheet" href="generals.css"/>
+  <style>
+    .circle {
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0);
+    border: 5px solid #cc0;
+    }
+    .annoshort {
+    max-width: 5em;
+    max-height: 3.2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+    .moverow {
+    }
+    .arrow {
+    border: solid #000;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 5px;
+    }
+    .down { transform: rotate(45deg); }
+    .up { transform: rotate(225deg); }
+    .left { transform: rotate(135deg); }
+    .right { transform: rotate(315deg); }
+  </style>
+</head>
+<body onload="main()">
+  <script src="jq.js"></script>
+  <script src="game.js"></script>
+  <script src="state.js"></script>
+  <script src="script.js">
+  </script>
+  <div id="game" style="float: left">
+  </div>
+  <div style="float: left; margin-top: 6em">
+    <div style="overflow-y: scroll; max-height: 30em; background: #fff">
+      <table id="moves" border="1">
+        <tr>
+          <td>Turn</td>
+          <td>Red</td>
+          <td>Blue</td>
+          <td>Army</td>
+          <td>Land</td>
+          <td>Cities</td>
+          <td>Commentary</td>
+        </tr>
+      </table>
+             
+    </div>
+    <div>
+      <textarea id="annotation" rows="30" cols="60">
+      </textarea>
+    </div>
+  </div>
+  <div id="history" style="position: absolute; top: 0px; right: 10px">
+  </div>
+</body>
